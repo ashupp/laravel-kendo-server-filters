@@ -1,5 +1,5 @@
 <?php
-namespace jorgealexandro\KendoFilters;
+namespace ashupp\KendoFilters;
 use Carbon\Carbon;
 
 Class Filters
