@@ -1,4 +1,4 @@
-# Laravel Kendo Selver Filters
+# Laravel Kendo Server Filters
 
 This Helper process Kendo Grid filters params and returns the Laravel filters equivalents ready to use in your query objects
 
