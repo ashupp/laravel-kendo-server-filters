@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "ashupp\\laravel-kendo-server-filters": "src/"
+            "ashupp\\laravelKendoServerFilters": "src/"
         }
     },
     "require": {
