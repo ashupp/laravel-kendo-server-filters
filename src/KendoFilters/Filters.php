@@ -9,6 +9,7 @@ Class Filters
 		$processedFilters = [];
 
 		foreach ($filters as $filter) {
+		    $filter['originalData'] = $filter;
 			if(array_search($filter['field'], $dateFields) != false) {
 				$filter['value'] = new Carbon($filter['value']);
 			}
