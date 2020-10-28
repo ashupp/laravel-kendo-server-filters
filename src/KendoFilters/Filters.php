@@ -14,7 +14,7 @@ Class Filters
 				$filter['value'] = new Carbon($filter['value']);
 			}
 			else {
-				switch ($filter['operator']) {
+				switch (strtolower(filter['operator'])) {
 					case 'startswith':
 						$filter['value'] = $filter['value'] . '%';
 						break;
@@ -25,44 +25,52 @@ Class Filters
 
 					case 'contains':
 					case 'doesnotcontain':
+                    case '*':
 						$filter['value'] = '%' . $filter['value'] . '%';
 						break;
 
 					default:
 						$filter['value'] = $filter['value'];
 						break;
-				}                   
-				
+				}
+
 			}
 
-			switch ($filter['operator']) {
+			switch (strtolower($filter['operator'])) {
 				case 'eq':
+				case '=':
 					$filter['operator'] = '=';
 					break;
 
 				case 'neq':
+				case '!=':
 					$filter['operator'] = '!=';
 					break;
 
 				case 'gte':
+				case '>=':
 					$filter['operator'] = '>=';
 					break;
 
 				case 'gt':
+				case '>':
 					$filter['operator'] = '>';
 					break;
 
 				case 'lte':
+				case '<=':
 					$filter['operator'] = '<=';
 					break;
 
 				case 'lt':
+				case '<':
 					$filter['operator'] = '<';
 					break;
 
 				case 'startswith':
 				case 'contains':
 				case 'endswith':
+                case '*':
 					$filter['operator'] = 'LIKE';
 					break;
 
