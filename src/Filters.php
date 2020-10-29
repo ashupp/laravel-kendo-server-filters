@@ -14,7 +14,7 @@ Class Filters
 				$filter['value'] = new Carbon($filter['value']);
 			}
 			else {
-				switch (strtolower(filter['operator'])) {
+				switch (strtolower($filter['operator'])) {
 					case 'startswith':
 						$filter['value'] = $filter['value'] . '%';
 						break;
