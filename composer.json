@@ -10,8 +10,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "ashupp\\KendoFilters": "src/"
+        "psr-4": {
+            "Ashupp\\KendoFilters\\": "src"
         }
     },
     "require": {
